@@ -9,7 +9,7 @@ body {
   box-sizing: border-box;
   font-family: 'Noto Sans', sans-serif;
   font-family: 'Noto Sans JP', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 img {
@@ -24,6 +24,37 @@ a {
   text-decoration: none;
 }
 
+.container {
+  max-width: 1260px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.sec-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sec-title .desc {
+  font-size: 1rem;
+  margin-left: 20px;
+}
+
+.contact-btn a{
+  display: inline-block;
+  width: 320px;
+  padding: 10px;
+  background-color: #FF5757;
+  border: 4px solid #FF5757;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+} 
+
+.contact-btn a:hover {
+  background-color: #FFF;
+  color: #FF5757;
+}
 /*************************************************
 header
 *************************************************/
@@ -110,9 +141,22 @@ nav .menu li{
   margin-bottom: 15px;
 }
 nav .menu li a{
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #FFF;
   font-weight: 700;
+  position: relative;
+}
+nav .menu li a::before {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: #FFF;
+  position: absolute;
+  bottom: 0px;
+  transition: all 0.3s linear;
+}
+nav .menu li a:hover::before{
+  width: 100%;
 }
 nav.active {
   display: block;
@@ -149,6 +193,7 @@ mainvisual
 
 .mainvisual {
   padding-top: 85px;
+  position: relative;
 }
 
 .mainvisual-items {
@@ -161,4 +206,221 @@ mainvisual
   height: 550px;
   object-fit: cover;
   object-position: center 30%;
+  filter: opacity(0.8);
+}
+
+.catchcopy {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
+.catchcopy-text {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+
+
+.contact-btn a {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #FFF;
+  text-align: center;
+}
+
+/*************************************************
+feature
+*************************************************/
+
+#feature {
+  background-color: #FFF;
+  padding: 120px 0;
+}
+
+.feature-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  width: 45%;
+}
+
+.feature-box:nth-child(1), .feature-box:nth-child(2) {
+  margin-bottom: 15px;
+}
+.feature-box span {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.feature-box span i {
+  font-size: 3rem;
+  color: #FF5757;
+}
+
+.feature-title{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*************************************************
+voice
+*************************************************/
+
+#voice {
+  background-color: #FFF;
+  padding-bottom: 120px;
+}
+
+.voice-text {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.voice-list {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  padding: 30px 20px;
+}
+
+.voice-item {
+  width: 32%;
+}
+
+.student-img {
+  display: block;
+  text-align: center;
+}
+
+.student-img img{
+  width: 75px;
+  height: 90px;
+}
+
+.student-info {
+  padding: 20px;
+}
+
+.student-name {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/*************************************************
+contact
+*************************************************/
+
+#contact {
+  background-color: #FFF;
+  padding-bottom: 120px;
+}
+
+.contact-text {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+dt {
+  width: 15%;
+}
+
+.required {
+  display: inline-block;
+  padding: 1px 5px;
+  background-color: #FF5757;
+  font-size: 0.8rem;
+  color: #FFF;
+  margin-left: 10px;
+}
+
+dd {
+  width: 85%;
+}
+
+dt, dd {
+  margin-bottom: 20px;
+}
+
+input{
+  border: 1px solid #CCC;
+  padding: 10px 10px;
+  width: 100%;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+textarea {
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  width: 100%;
+  height: 180px;
+  padding: 10px;
+}
+
+.contact-btn a{
+  margin: 0 auto;
+}
+
+/*************************************************
+footer
+*************************************************/
+
+footer {
+  background-color: #FF5757;
+  padding: 30px;
+}
+
+.footer-upper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1260px;
+  margin: 0 auto 30px auto;
+}
+
+.sns-list {
+  display: flex;
+}
+
+.sns-item:not(:last-child){
+  margin-right: 10px;
+}
+.sns-item a i {
+  font-size: 2rem;
+  color: #FFF;
+}
+
+.lesson-item:not(:last-child), 
+.price-item:not(:last-child),
+.teacher-item:not(:last-child), 
+.company-item:not(:last-child){
+  margin-bottom: 5px;
+} 
+
+.footer-upper ul li,
+.footer-upper ul li a{
+  color: #FFF;
+}
+
+.footer-lower {
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.635rem;
+  color: #FFF;
 }
