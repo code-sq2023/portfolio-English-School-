@@ -15,7 +15,13 @@ $(function() {
   });
 
   /*メインビジュアルのスライダー設定 */
-  $(".mainvisual").slick({
-    
+  $(".mainvisual-items").slick({
+    autoplay: true,
+    autoplaySpeed: 4000,
+    infinite: true,
+    fade: true,
+    cssEase: 'linear',
+    speed: 1000,
+    arrows: false,
   });
 });
