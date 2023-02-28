@@ -42,18 +42,62 @@ a {
 }
 
 .contact-btn a{
-  display: inline-block;
+  display: block;
   width: 320px;
   padding: 10px;
   background-color: #FF5757;
   border: 4px solid #FF5757;
   transition: all 0.3s ease;
   border-radius: 10px;
+  color: #FFF;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
 } 
 
 .contact-btn a:hover {
   background-color: #FFF;
   color: #FF5757;
+}
+
+.return-btn {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background-color: #FFF;
+  border: 3px solid #FF5757;
+  bottom: 20%;
+  right: 30px;
+  cursor: pointer;
+  border-radius:  10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.return-btn.show {
+  visibility: visible;
+  opacity: 0.8;
+}
+
+.return-btn::before,
+.return-btn::after
+{
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 5px;
+  background-color: #FF5757;
+  top: 13px;
+}
+
+.return-btn::before {
+    transform: rotate(45deg);
+    right: 0;
+}
+.return-btn::after {
+  transform: rotate(-45deg);
+  left: 0;
 }
 /*************************************************
 header
@@ -167,8 +211,6 @@ nav.active {
   z-index: 20;
 }
 
-
-
 .overlay{
   position: fixed;
   top: 0;
@@ -196,17 +238,28 @@ mainvisual
   position: relative;
 }
 
-.mainvisual-items {
+.mainvisual-list {
   width: 100vw;
   height: 100%;
+  position: relative;
 }
 
-.mainvisual-items img {
+.mainvisual-list li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.3;
+}
+
+.mainvisual-list img {
   width: 100%;
   height: 550px;
   object-fit: cover;
   object-position: center 30%;
-  filter: opacity(0.8);
 }
 
 .catchcopy {
@@ -217,20 +270,11 @@ mainvisual
 
 .catchcopy-text {
   display: block;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.3;
   margin-bottom: 30px;
-}
-
-
-
-.contact-btn a {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 500;
   color: #FFF;
-  text-align: center;
 }
 
 /*************************************************
@@ -239,7 +283,7 @@ feature
 
 #feature {
   background-color: #FFF;
-  padding: 120px 0;
+  padding-top: 120px;
 }
 
 .feature-inner {
@@ -250,6 +294,7 @@ feature
 
 .feature-box {
   width: 45%;
+  padding: 20px
 }
 
 .feature-box:nth-child(1), .feature-box:nth-child(2) {
@@ -276,7 +321,7 @@ voice
 
 #voice {
   background-color: #FFF;
-  padding-bottom: 120px;
+  padding-top: 120px;
 }
 
 .voice-text {
@@ -322,21 +367,12 @@ contact
 
 #contact {
   background-color: #FFF;
-  padding-bottom: 120px;
+  padding: 120px 0;
 }
 
 .contact-text {
   text-align: center;
   margin-bottom: 60px;
-}
-
-dl {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-dt {
-  width: 15%;
 }
 
 .required {
@@ -345,15 +381,18 @@ dt {
   background-color: #FF5757;
   font-size: 0.8rem;
   color: #FFF;
-  margin-left: 10px;
+  margin-left: 3px;
 }
-
+dl {
+  width: 70%;
+  margin: 0 auto;
+}
 dd {
-  width: 85%;
+  width: 100%;
 }
 
 dt, dd {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 input{
@@ -372,7 +411,7 @@ textarea {
   padding: 10px;
 }
 
-.contact-btn a{
+.contact-btn.submit a{
   margin: 0 auto;
 }
 
@@ -392,12 +431,11 @@ footer {
   margin: 0 auto 30px auto;
 }
 
-.sns-list {
-  display: flex;
-}
-
 .sns-item:not(:last-child){
-  margin-right: 10px;
+  margin:0 10px 10px 0;
+}
+.sns-item a{
+  display: inline-block;
 }
 .sns-item a i {
   font-size: 2rem;
@@ -414,6 +452,14 @@ footer {
 .footer-upper ul li,
 .footer-upper ul li a{
   color: #FFF;
+}
+
+.footer-upper ul li a{
+  transition: all 0.3s linear;  
+}
+
+.footer-upper ul li a:hover{
+  opacity: 0.5;
 }
 
 .footer-lower {
