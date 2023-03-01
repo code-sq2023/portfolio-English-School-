@@ -28,7 +28,7 @@ $(function() {
     infinite: true,
     fade: true,
     cssEase: 'linear',
-    speed: 1000,
+    speed: 2000,
     arrows: false,
   });
 
@@ -55,5 +55,22 @@ $(function() {
     }, 300);
    });
 
+   /*SP時にフッターのアコーディオンメニューを閉じておく*/
+   $(window).on("resize load", () => {
+     if(window.matchMedia("(max-width: 768px)").matches) {
+       $(".footer-link").hide();
+      }else if(window.matchMedia("(min-width: 769px)").matches){
+        $(".footer-link").show();
+      }
+    });
+    
+  /*フッターのアコーディオンメニュー開閉*/
+  $(".link-title").on("click", (e) => {
+    if(window.matchMedia("(max-width: 768px)").matches) {
+      $(e.currentTarget).next().slideToggle(400);
+    }else {
+      return false;
+    }
+  });
 
 });

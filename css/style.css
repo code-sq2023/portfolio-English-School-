@@ -40,6 +40,9 @@ a {
   font-size: 1rem;
   margin-left: 20px;
 }
+.sp-only {
+  display: none;
+}
 
 .contact-btn a{
   display: block;
@@ -462,6 +465,12 @@ footer {
   opacity: 0.5;
 }
 
+.link-title {
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .footer-lower {
   text-align: center;
 }
@@ -469,4 +478,154 @@ footer {
 .copyright {
   font-size: 0.635rem;
   color: #FFF;
+}
+
+/*************************************************
+SP
+*************************************************/
+
+@media (max-width: 768px) {
+  .contact-btn a{
+    font-size: 0.7rem;
+    width: 180px;
+    padding: 8px;
+  }
+  .sec-title {
+    line-height: 1;
+  }
+  .sec-title .desc {
+    display: block;
+    font-size: 0.8rem;
+    margin: 10px auto 0 auto;
+  }
+  .sp-only {
+    display: block;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+  /*************************************************
+  header
+  *************************************************/
+  .header-inner {
+    padding: 0 10px;
+  }
+  .logo {
+    width: 150px;
+    height: 40px;
+  }
+  .menu-btn {
+    width: 30px;
+    height: 20px;
+  }
+  .menu-btn span {
+    height: 3px;
+  }
+  .menu-btn span:nth-child(2) {
+    top: 9px;
+  }
+
+  .menu-btn.active span:nth-child(1) {
+    top: 9px;
+  }
+
+  .menu-btn.active span:nth-child(3) {
+    bottom: 9px; 
+  }
+  /*************************************************
+  mainvisual
+  *************************************************/
+  .mainvisual-list {
+    max-height: 400px;
+  }
+  .mainvisual-list img {
+    object-position: 85% 0%;
+  }
+ .slick-slide {
+    height: 400px;
+ }
+ .catchcopy {
+  top: 60%;
+  left: 40%;
+  transform: translateX(-50%);
+ }
+  .catchcopy-text {
+    font-size: 1.2rem;
+    white-space:nowrap
+  }
+
+  /*************************************************
+  feature
+  *************************************************/
+  .feature-inner {
+    flex-direction: column;
+  }
+
+  .feature-box {
+    width: 100%;
+  }
+
+  /*************************************************
+  voice
+  *************************************************/
+  .voice-text {
+    font-size: 1.2rem;
+  }
+  .voice-list {
+    flex-direction: column;
+    padding: 30px 0px;
+  }
+
+  .voice-item {
+    width: 100%;
+  }
+  .voice-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  /*************************************************
+  contact
+  *************************************************/
+  dl {
+    width: 100%;
+  }
+  .contact-btn.submit a {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  /*************************************************
+  footer
+  *************************************************/
+  footer {
+    padding: 30px 10px;
+  }
+  .footer-upper{
+    flex-direction: column;
+  }
+  .sns-list {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  .link-title {
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 0.3s linear;
+  }
+  .link-title:hover {
+    opacity: 0.7;
+  }
+  .link-wrap:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .footer-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .footer-item{
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .footer-item:hover{
+   opacity: 0.7;
+  }
 }
