@@ -365,6 +365,123 @@ voice
 }
 
 /*************************************************
+news
+*************************************************/
+#news {
+  background-color: #FFF;
+  padding-top: 120px;
+}
+
+.news-info {
+  border: 3px dashed #FF5757;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 30px;
+  overflow-y: scroll;
+  height: 170px;
+}
+
+.date:not(:last-child), .info-content:not(:last-child) {
+  margin-bottom: 20px;
+}
+.date{
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 1px 10px;
+  border-radius: 50px;
+  margin-left: 10px;
+  color: #FFF;
+}
+
+.campaign {
+  background-color: rgb(76, 202, 252);
+}
+
+.event {
+  background-color: rgb(247, 119, 140);
+}
+
+.topic {
+  background-color: rgb(106, 81, 250);
+}
+.new {
+  background-color: #ff57db;
+}
+.info-content {
+  width: 80%;
+}
+.info-content a {
+  color: #333;
+  position: relative
+}
+
+.info-content a::before{
+  position: absolute;
+  content:"";
+  display: block;
+  width: 0%;
+  height: 1px;
+  bottom: -5px;
+  background-color: #333;
+  transition: all 0.3s linear;
+}
+
+.info-content a:hover::before{
+  width: 100%;
+}
+
+/*************************************************
+access
+*************************************************/
+#access {
+  background-color: #FFF;
+  padding-top: 120px;
+  
+} 
+
+.access-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.access-text {
+  width: 50%;
+}
+
+.school-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.access-title {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  display: inline-block;
+  border-bottom: 2px dotted #333;
+}
+.school-info dt {
+  width: 30%;
+  font-weight: 700;
+}
+.access-icon {
+  margin-right: 10px;
+}
+.school-info dd {
+  width: 60%;
+}
+.access-map {
+  width: 50%;
+}
+.map {
+  width: 100%;
+  height: auto;
+}
+/*************************************************
 contact
 *************************************************/
 
@@ -386,15 +503,15 @@ contact
   color: #FFF;
   margin-left: 3px;
 }
-dl {
+.contact-form {
   width: 70%;
   margin: 0 auto;
 }
-dd {
+.contact-form dd {
   width: 100%;
 }
 
-dt, dd {
+.contact-form dt, dd {
   margin-bottom: 10px;
 }
 
@@ -586,7 +703,7 @@ SP
   /*************************************************
   contact
   *************************************************/
-  dl {
+  .contact-form {
     width: 100%;
   }
   .contact-btn.submit a {
