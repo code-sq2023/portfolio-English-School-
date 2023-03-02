@@ -58,7 +58,7 @@ $(function() {
    /*SP時にフッターのアコーディオンメニューを閉じておく*/
    $(window).on("resize load", () => {
      if(window.matchMedia("(max-width: 768px)").matches) {
-       $(".footer-link").hide();
+        $(".footer-link").hide();
       }else if(window.matchMedia("(min-width: 769px)").matches){
         $(".footer-link").show();
       }

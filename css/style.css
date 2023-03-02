@@ -7,8 +7,7 @@ html{
 body {
   color: #333;
   box-sizing: border-box;
-  font-family: 'Noto Sans', sans-serif;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Sans','Noto Sans JP', sans-serif;
   overflow-x: hidden;
 }
 
@@ -56,6 +55,7 @@ a {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
+  line-height: 1.2;
 } 
 
 .contact-btn a:hover {
@@ -275,7 +275,7 @@ mainvisual
   display: block;
   font-size: 2.4rem;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.2;
   margin-bottom: 30px;
   color: #FFF;
 }
@@ -387,16 +387,18 @@ news
   margin-bottom: 20px;
 }
 .date {
-  flex: 0 0 90px;
+  flex: 0 0 120px;
+  margin-right: 10px;
 }
 .tag {
   display: inline-block;
-  padding: 1px 5px;
+  padding: 0 5px;
   border-radius: 50px;
   color: #FFF;
   font-size: 0.8rem;
-  flex: 0 0 100px;
+  flex: 0 0 130px;
   text-align: center;
+  line-height: 2;
 }
 
 .campaign {
@@ -430,7 +432,6 @@ access
 #access {
   background-color: #FFF;
   padding-top: 120px;
-  
 } 
 
 .access-wrap {
@@ -445,6 +446,11 @@ access
 .school-info {
   display: flex;
   flex-wrap: wrap;
+}
+
+.tel {
+  pointer-events: none;
+  color: #333 !important;
 }
 
 .access-title {
@@ -516,11 +522,15 @@ contact
 input{
   border: 1px solid #CCC;
   padding: 10px 10px;
-  width: 100%;
   font-size: 1.2rem;
   border-radius: 5px;
 }
-
+input:not([type="tel"]) {
+  width: 100%;
+}
+input[type="tel"] {
+  width: 20%;
+}
 textarea {
   border: 1px solid #CCC;
   border-radius: 5px;
@@ -585,7 +595,9 @@ footer {
   font-size: 1rem;
   font-weight: 400;
 }
-
+.footer-link {
+  display: none;
+}
 .footer-lower {
   text-align: center;
 }
@@ -673,6 +685,9 @@ SP
   /*************************************************
   feature
   *************************************************/
+  #feature {
+    padding-top: 90px;
+  }
   .feature-inner {
     flex-direction: column;
   }
@@ -684,6 +699,9 @@ SP
   /*************************************************
   voice
   *************************************************/
+  #voice {
+    padding-top: 90px;
+  }
   .voice-text {
     font-size: 1.2rem;
   }
@@ -701,6 +719,9 @@ SP
   /*************************************************
   news
   *************************************************/
+  #news {
+    padding-top: 90px;
+  }
   .news-item {
     flex-wrap: wrap;
   }
@@ -711,6 +732,9 @@ SP
   /*************************************************
   access
   *************************************************/
+  #access {
+    padding-top: 90px;
+  }
   .access-wrap {
     flex-direction: column;
   }
@@ -718,13 +742,10 @@ SP
     margin-bottom: 30px;
     width: 100%;
   }
- 
-  .school-info dt {
-    width: 120px;
+  .school-info {
+    flex-direction: column;
   }
-  .school-info dd {
-    width: 150px;
-  }
+
   .access-map {
     width: 100%;
     height: 40%;
@@ -732,6 +753,9 @@ SP
   /*************************************************
   contact
   *************************************************/
+  #contact {
+    padding: 90px 0;
+  }
   .contact-form {
     width: 100%;
   }

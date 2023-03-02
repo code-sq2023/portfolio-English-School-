@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N30CVKVKRV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-N30CVKVKRV');
+  </script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="このサイトは架空の英会話学校のwebサイトです。">
+  <meta property="og:title" content="ACE -Advanced Comunication English-">
+  <meta property="og:description" content="このサイトは架空の英会話学校のwebサイトです。">
+  <meta property="og:url" content="https://code-sq.com/portfolio/potfolio1">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="./img/ogp.jpg">
+  <meta property="og:name" content="架空英会話学校ACE">
   <title>ACE -Advanced Comunication English-</title>
   <link rel="icon" href="./img/favicon.ico">
   <link rel="stylesheet" href="./libs/slick-theme.css">
@@ -39,7 +55,7 @@
   </header><!-- header -->
 
   <main>
-    <section class="mainvisual">
+    <div class="mainvisual">
       <ul class="mainvisual-list">
         <li><img src="./img/mainvisual1.jpg" alt=""></li>
         <li><img src="./img/mainvisual2.jpg" alt=""></li>
@@ -53,7 +69,7 @@
           <a href="#contact">無料体験レッスンはこちら</a>
         </div>
       </div>
-    </section><!--mainvisual-->
+    </div><!--mainvisual-->
 
     <div class="container">
       <section id="feature">
@@ -120,16 +136,16 @@
 
         <ul class="news-list">
           <li class="news-item">
-            <time class="date">2023.4.10</time><span class="tag campaign">キャンペーン</span><span class="info-content"><a href="javascript:void(0)"><span class="tag new">NEW</span>【開校５周年記年 4月17~23日限定】受講料30％オフキャンペーン</a></span>
+            <span class="date">2023.☓☓.☓☓</span><span class="tag campaign">キャンペーン</span><span class="info-content"><a href="javascript:void(0)"><span class="tag new">NEW</span>【開校５周年記年 ☓月☓☓~☓☓日限定】受講料30％オフキャンペーン</a></span>
           </li>
           <li class="news-item">
-            <time class="date">2023.3.25</time><span class="tag event">イベント</span><span class="info-content"><a href="javascript:void(0)">イベントのお知らせ</a></span>
+            <span class="date">2023.☓☓.☓☓</span><span class="tag event">イベント</span><span class="info-content"><a href="javascript:void(0)">イベントのお知らせ</a></span>
           </li>
           <li class="news-item">
-            <time class="date">2023.3.15</time><span class="tag topic">トッピクス</span><span class="info-content"><a href="javascript:void(0)">TOEIC集中講座開始について</a></span>
+            <span class="date">2023.☓☓.☓☓</span><span class="tag topic">トッピクス</span><span class="info-content"><a href="javascript:void(0)">TOEIC集中講座開始について</a></span>
           </li>
           <li class="news-item">
-            <time class="date">2023.1.22</time><span class="tag topic">トピックス</span><span class="info-content"><a href="javascript:void(0)">英会話ビギナーコース募集開始について</a></span>
+            <span class="date">2023.☓☓.☓☓</span><span class="tag topic">トピックス</span><span class="info-content"><a href="javascript:void(0)">英会話ビギナーコース募集開始について</a></span>
           </li>
         </ul>
       </section><!--news-->
@@ -143,7 +159,7 @@
             <h3 class="access-title">スクール情報</h3>
             <dl class="school-info">
               <dt><i class="fa-solid fa-phone access-icon"></i>電話番号</dt>
-              <dd>123-456-7890</dd>
+              <dd><a class="tel" href="javascript:void(0)">123-456-7890</a></dd>
               <dt><i class="fa-solid fa-train-subway access-icon"></i>アクセス</dt>
               <dd>東京都中央区〇〇○</dd>
               <dt><i class="fa-regular fa-clock access-icon"></i>開校時間</dt>
@@ -171,6 +187,8 @@
             <dd><input type="text" id="name" name="name" required></dd>
             <dt><label for="email">メールアドレス <span class="required">必須</span></label></dt>
             <dd><input type="email" id="email" name="email" required></dd>
+            <dt><label for="email">電話番号（半角） <span class="required">必須</span></label></dt>
+            <dd><input type="tel" id="tel1" name="tel1" required>-<input type="tel" id="tel2" name="tel2" required>-<input type="tel" id="tel3" name="tel3" required></dd>
             <dt><label for="address">ご住所 <span class="required">必須</span></label></dt>
             <dd><input type="text" id="address" name="address" required></dd>
             <dt><label for="question">ご質問など</label></dt>
