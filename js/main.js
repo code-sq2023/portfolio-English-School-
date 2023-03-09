@@ -30,6 +30,7 @@ $(function() {
     cssEase: 'linear',
     speed: 2000,
     arrows: false,
+    pauseOnHover:false
   });
 
   /*メインビジュアルより下にスクロールすると戻るボタンを表示する*/
