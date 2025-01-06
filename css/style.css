@@ -1,4 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Paytone+One&display=swap');
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("../googlefonts/NotoSansJP-Regular.ttf")format("truetype"),
+       url("../googlefonts/NotoSansJP-Medium.ttf")format("truetype"),
+       url("../googlefonts/NotoSansJP-SemiBold.ttf")format("truetype"),
+       url("../googlefonts/NotoSansJP-Bold.ttf")format("truetype");
+} 
+ 
+ @font-face {
+  font-family: "Paytone One";
+  src: url("../googlefonts/PaytoneOne-Regular.ttf")format("truetype");
+}  
 
 html{
   font-size: 100%;
@@ -30,7 +41,8 @@ a {
 }
 
 .sec-title {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -136,36 +148,44 @@ a {
 .loading-letters {
   letter-spacing: 0.2em;
   font-family: "Paytone One", sans-serif;
+  font-weight: 700;
   font-size: 5rem;
   font-weight: 600;
   color: #FF5757;
 }
+
 .loading-letter{
+  will-change: transform;
   animation: loading-animation 0.7s ease-in-out forwards;
   transform: translateY(0) scale(0);
   display: inline-block;
 }
+
 .loading-letter:nth-child(2){
   animation-delay: 0.3s;
-} 
+}
+
 .loading-letter:nth-child(3) {
   animation-delay: 0.6s;
-} 
+}
+
 @keyframes loading-animation {
   0% {
-    transform: translateY(0px) scale(0);
+    transform: translateY(0) scale(0);
   }
+
   30% {
-    transform: translateY(30px) scale(0.3);
+    transform: translateY(40px) scale(0.3);
   }
 
   50% {
-    transform: translateY(50px) scale(0.5);
+    transform:translateY(0px) scale(0.5);
   }
 
   70% {
-    transform:translateY(-40px) scale(1);
+    transform:translateY(-40px) scale(0.7);
   }
+  
   100% {
     transform:translateY(0px) scale(1);
   }
@@ -391,11 +411,11 @@ mainvisual
 .mainvisual-list {
   display: flex;
   align-items: center;
-  column-gap: 1em;
+  column-gap: 1.5em;
 }
 
 .mainvisual-item {
-  width: calc((100% - 2em) / 3);
+  width: calc((100% - 3em) / 3);
   max-width: 250px;
   height: auto;
   aspect-ratio: 1/1;
