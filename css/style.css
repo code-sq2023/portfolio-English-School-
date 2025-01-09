@@ -258,7 +258,7 @@ header {
 .pc-logo a img {
   width: 100%;
   height: 100%;
-  vertical-align: bottom;
+  vertical-align: top;
 }
 
 .header-block {
@@ -399,7 +399,7 @@ mainvisual
   bottom: 3%;
   left: 4%;
   z-index: 2;
-  width: 45%;
+  width: 43%;
 }
 .catchcopy {
   display: block;
@@ -420,10 +420,10 @@ mainvisual
 
 .mainvisual-item {
   width: calc((100% - 3em) / 3);
+  min-width: 160px;
   max-width: 250px;
   height: auto;
   aspect-ratio: 1/1;
-  font-size:  clamp(0.875rem, 2vw, 1.875rem);;
   background-color: #FF5757;
   border-radius: 50%;
   display: flex;
@@ -432,10 +432,10 @@ mainvisual
 }
 
 .mainvisual-item span {
-  font-size: clamp(0.875rem, 1vw, 1.25rem);
   font-weight: 600;
   color: #FFF;
   text-align: center;
+  font-size: clamp(0.875rem, 1vw, 1.25rem);
 }
 /*************************************************
 feature
@@ -511,6 +511,7 @@ course
 
 .course-img img{
   width: 100%;
+  height: auto;
   max-height: 400px; 
   object-fit: cover;
   object-position: center 0%;
@@ -1167,7 +1168,7 @@ SP
  
   .mainvisual-text {
     left: 2%;
-    width: 90%;
+    width: 95%;
     max-width: 400px;
   }
 
@@ -1178,14 +1179,15 @@ SP
  }
 
  .mainvisual-list {
-   column-gap: 0.5em; 
+   column-gap: 0.8em; 
  }
  .mainvisual-item {
-  width: calc((100% - 1em) / 3);
+  width: calc((100% - 1.6em) / 3);
+  min-width: auto;
  }
 
  .mainvisual-item span {
-  font-size: clamp(0.625rem, 1vw, 1rem);
+  font-size: clamp(0.5625rem, 1vw, 1rem);
  }
   /*************************************************
   feature
